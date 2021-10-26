@@ -1,0 +1,135 @@
+.nav-bar {
+  padding: 0px 15px 0px 15px;
+  display: flex;
+  justify-content: space-between;
+  background: var(--headerBackground);
+  color: var(--white);
+}
+
+.nav-bar .brand {
+  padding-top: 6px;
+  padding-bottom: 3px;
+}
+
+.header.font-icon {
+  color: var(--white);
+}
+
+.nav-bar .nav-items,
+.nav-bar .brand {
+  display: flex;
+}
+
+.nav-bar .nav-item {
+  color: var(--white);
+  text-decoration: none;
+  cursor: pointer;
+  padding: 10px 12px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.nav-item.active {
+  background: #387ab3;
+}
+.nav-item.no-action {
+  pointer-events: none;
+}
+.nav-bar .nav-item:hover {
+  background: var(--backgroundPrimaryHover);
+}
+
+.nav-bar .nav-item:active {
+  background: var(--backgroundPrimaryActive);
+}
+
+.font-bar {
+  color: var(--iconColor);
+  cursor: pointer;
+  margin: 5px 10px;
+  font-size: 16px;
+}
+
+.nav-bar h1.brand-name {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.nav-bar .account-name {
+  margin-left: 10px;
+}
+
+.nav-bar .brand-logo {
+  width: 31px;
+  height: 31px;
+}
+
+.nav-bar .notification-count {
+  position: absolute;
+  padding: 2px 4px;
+  background-color: var(--white);
+  color: var(--notificationBackground);
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 100%;
+  left: 21px;
+  line-height: 11px;
+  user-select: none;
+}
+.nav-bar .menu-icon {
+  margin-top: 10px;
+  display: none;
+}
+
+@media screen and (max-width: 640px) {
+  .nav-bar .menu-icon {
+    display: block;
+  }
+  .nav-bar .nav-items {
+    flex-direction: column;
+    background: var(--white);
+    position: absolute;
+    color: var(--lightBlack);
+    right: 0;
+    top: 47px;
+    border: 1px solid var(--gainsBoro);
+    display: none;
+    transform-origin: top center;
+    transition: transform 400ms ease-in-out;
+    animation: rotateMenu 400ms ease-in-out forwards;
+  }
+
+  .nav-bar .nav-items.show {
+    display: block;
+  }
+
+  .nav-items .header.font-icon {
+    color: var(--iconColorPrimary);
+  }
+
+  .nav-bar .notification-count {
+    background-color: var(--iconColor);
+    color: var(--white);
+  }
+
+  .nav-bar .nav-item {
+    display: block;
+    color: var(--black);
+  }
+
+  .nav-bar .nav-item.active {
+    color: var(--white);
+  }
+
+  .nav-bar .nav-item:hover {
+    opacity: 1;
+    background: var(--backgroundPrimaryHover);
+    color: var(--white);
+  }
+  .nav-bar .nav-item:hover {
+    opacity: 1;
+    background: var(--backgroundPrimaryActive);
+  }
+}

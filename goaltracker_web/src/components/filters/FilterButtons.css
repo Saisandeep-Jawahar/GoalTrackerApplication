@@ -1,0 +1,22 @@
+.filters {
+  margin-top: 20px;
+  display: flex;
+}
+
+.filter-button {
+  cursor: pointer;
+  background-color: var(--white);
+  font-size: 15px;
+  color: var(--grey);
+  border: 0 none;
+  margin-right: 5px;
+  padding: 4px 20px 5px 20px;
+  border-radius: 15px;
+}
+
+.filter-button:hover,
+.filter-button:active,
+.filter-button:focus,
+.filter-button.selected {
+  background-color: var(--whiteSmoke);
+}

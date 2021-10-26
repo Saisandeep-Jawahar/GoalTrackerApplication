@@ -1,0 +1,95 @@
+.card {
+  margin: 10px;
+  padding: 12px 10px 13px 12px;
+  width: 16em;
+  box-shadow: 0px 4px 10px var(--boxShadowPrimary);
+  background-color: var(--white);
+  border-radius: 20px;
+  transform: scale(1);
+  transition: transform 170ms ease-out;
+  animation-name: moveCard;
+  animation-timing-function: ease-out;
+}
+
+.card:hover {
+  transform: scale(1.04);
+  background: var(--backgroundSecondary);
+}
+
+.card-header,
+.card .status {
+  display: flex;
+}
+
+.card-header {
+  margin-bottom: 7px;
+}
+
+.card .status {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.card .state {
+  cursor: default;
+  padding: 2px 14px 4px 14px;
+  color: var(--textColor2);
+  background-color: var(--backgroundColor2);
+  border-radius: 7px;
+  border: 0 none;
+  white-space: nowrap;
+}
+
+.card .state.Completed {
+  background-color: var(--backgroundColor3);
+  color: var(--textColor3);
+}
+
+.card .state.Draft {
+  background-color: var(--backgroundColor1);
+  color: var(--textColor1);
+}
+
+.card .type {
+  margin-right: 5px;
+  margin-bottom: 3px;
+}
+
+.card .template {
+  color: var(--iconColor);
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-title {
+  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-description {
+  font-size: 14px;
+  height: 57px;
+  text-align: left;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.card-actions {
+  display: flex;
+  margin-left: auto;
+}
+
+.card .edit-icon,
+.card .delete-icon {
+  cursor: pointer;
+  margin-left: 6px;
+  margin-right: 6px;
+  margin-top: 7px;
+}

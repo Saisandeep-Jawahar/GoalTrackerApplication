@@ -1,0 +1,141 @@
+:root {
+  /* bootstrap styles */
+  --backgroundPrimary: #317ab9;
+  --backgroundPrimaryHover: #21527d;
+  --backgroundPrimaryActive: #21527d;
+  --borderPrimaryColor: #e9ecef;
+  --white: #ffffff;
+  --backgroundSecondary: #f9f9f9;
+  /* --------------- */
+  --black: #000000;
+  --lightBlack: #333333;
+  --searchTextColor: #635e5e;
+  --grey: #a49292;
+  --gainsBoro: #dedbdb;
+  --iconColor: #b0a8a8;
+  --whiteSmoke: #f1f1f1;
+  --iconColorPrimary: #ada8a8;
+  --borderColor: #ada8a80f;
+  --borderFormElements: rgba(4, 130, 220, 0.16);
+  --boxShadowPrimary: rgba(4, 130, 220, 0.23);
+  --boxShadowSecondary: rgba(4, 130, 220, 0.17);
+  --boxShadowFormElements: rgba(4, 130, 220, 0.11);
+  --dialogHeaderColor: #f9f9f9;
+  --popupItemHover: #00d1ff;
+  --textColor1: #bd210f;
+  --textColor2: #1e7167;
+  --textColor3: #023779;
+  --backgroundColor1: rgba(250, 203, 198, 0.52);
+  --backgroundColor2: rgba(158, 229, 221, 0.52);
+  --backgroundColor3: rgba(135, 188, 253, 0.52);
+  --headerBackground: linear-gradient(to left, #12c2e9 0%, #428bca 10%);
+  /* --dialogHeaderBackground: linear-gradient(to bottom, #12c2e9 0%, #0069ff 40%); */
+  --dialogHeaderBackground: #428bca;
+  --notificationBackground: darkblue;
+  --hoverColor: #4a00e0;
+  --primaryButtonBackground: linear-gradient(
+    180deg,
+    rgba(127, 0, 255, 0.63) 0%,
+    rgba(127, 0, 255, 0.63) 60%,
+    rgba(225, 0, 255, 0.69) 100%
+  );
+  --secondaryButtonBackground: linear-gradient(
+    180deg,
+    rgba(188, 78, 156, 0.75) 0%,
+    rgba(248, 7, 89, 0.8) 100%
+  );
+}
+
+.font-icon {
+  color: var(--iconColorPrimary);
+}
+
+.position-relative {
+  position: relative;
+}
+
+.margin-right-40 {
+  margin-right: 40px;
+}
+
+.App-header {
+  position: fixed;
+  width: 100%;
+  background-color: #ffff;
+  z-index: 2;
+  top: 0;
+}
+
+.button {
+  cursor: pointer;
+  padding: 5px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--gainsBoro);
+  color: var(--lightBlack);
+  background-color: var(--white);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.button:focus-visible {
+  box-shadow: 0 0 0 0.2rem var(--gainsBoro) !important;
+}
+
+input.file:focus-visible {
+  outline: var(--iconColor) auto 1px;
+  box-shadow: none;
+}
+
+.button.selected {
+  background: var(--secondaryButtonBackground);
+  color: var(--white);
+}
+
+.button .icon {
+  font-size: 14px;
+  margin-right: 5px;
+  color: var(--iconColor);
+}
+.button.selected .icon {
+  color: var(--white);
+}
+
+.button[disabled] {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.close-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.notification-container {
+  z-index: 2;
+  top: 40px;
+  user-select: none;
+  transform-origin: top center;
+  animation: rotateMenu 400ms ease-in-out forwards;
+}
+
+@keyframes rotateMenu {
+  0% {
+    transform: rotateX(-90deg);
+  }
+  70% {
+    transform: rotateX(20deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes moveCard {
+  0% {
+    transform: translateX(1000px) scale(0);
+  }
+  100% {
+    display: block;
+    transform: translateX(0) scale(1);
+  }
+}

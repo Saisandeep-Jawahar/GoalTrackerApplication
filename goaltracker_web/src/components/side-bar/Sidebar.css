@@ -1,0 +1,69 @@
+.sidebar .category {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin: 0 0 10px;
+  clear: both;
+  color: #282c3f;
+}
+
+.sidebar .filter {
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--gainsBoro);
+}
+
+.sidebar .collapse-icon {
+  cursor: pointer;
+  float: right;
+  position: relative;
+  top: -7px;
+}
+
+.date-filter {
+  width: 197px;
+  height: 31px;
+  box-sizing: border-box;
+  text-indent: 4px;
+  border: 1px solid var(--borderFormElements);
+  border-radius: 5px;
+  box-shadow: 4px 4px 20px var(--boxShadowPrimary);
+  outline: none;
+}
+
+.sidebar .react-datepicker-wrapper, .sidebar .dropdown {
+  margin-bottom: 18px;
+}
+.sidebar .react-datepicker__input-container::after {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  right: 12px;
+  top: 7px;
+  content: url(/src/icons/calendar-alt-solid.svg);
+  pointer-events: none;
+}
+
+.sidebar .input-chips {
+  width: 197px;
+  margin-bottom: 18px;
+}
+
+.Sidebar-outer::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.Sidebar-outer::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.Sidebar-outer::-webkit-scrollbar-thumb {
+  background: var(--gainsBoro);
+}
+
+/* Handle on hover */
+.Sidebar-outer::-webkit-scrollbar-thumb:hover {
+  background: var(--iconColor);
+}

@@ -1,0 +1,383 @@
+.ReactModal__Overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  position: fixed;
+  border: 0 none;
+  box-shadow: 0px 4px 100px var(--boxShadowSecondary);
+  border-radius: 10px;
+  background-color: var(--white);
+  outline: none;
+  max-width: 600px;
+}
+
+.modal .modal-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  font-size: 18px;
+  background: var(--white);
+  color: var(--lightBlack);
+  font-weight: 500;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: 1px solid var(--borderPrimaryColor);
+}
+
+.modal .modal-header .close-icon {
+  padding: 3px;
+  border-radius: 50%;
+}
+
+.modal .modal-header .close-icon:hover {
+  background-color: var(--gainsBoro);
+}
+
+.modal .header.font-icon {
+  color: var(--iconColorPrimary);
+}
+
+.modal .modal-row {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.modal .modal-row label {
+  margin-bottom: 4px;
+  display: block;
+  font-size: 14px;
+}
+
+.textarea {
+  box-sizing: border-box;
+  font-size: 14px;
+  width: 100%;
+  height: 63px;
+  border-radius: 5px;
+  border: 1px solid var(--borderFormElements);
+  box-shadow: 0px 4px 20px var(--boxShadowFormElements);
+  outline: none;
+  padding-left: 8px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+.modal .react-datepicker-wrapper {
+  display: block;
+}
+
+.modal .react-datepicker__input-container::after {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  right: 12px;
+  top: 7px;
+  content: url(/src/icons/calendar-alt-solid.svg);
+}
+
+.textbox {
+  width: 100%;
+  height: 31px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid var(--borderFormElements);
+  box-shadow: 0px 4px 20px var(--boxShadowFormElements);
+  outline: none;
+  padding-left: 8px;
+}
+
+.textbox.file {
+  padding-left: 40px;
+  padding-top: 7px;
+}
+.textbox.file::-webkit-file-upload-button,
+.textbox.file::file-selector-button {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.file-upload {
+  position: relative;
+}
+
+.file-upload .file.hide {
+  color: transparent;
+}
+
+.file-upload::before {
+  content: url(/src/icons/cloud-upload.svg);
+  margin-right: 10px;
+  margin-left: 10px;
+  display: inline-block;
+  height: 16px;
+  width: 25px;
+  position: absolute;
+  top: 5px;
+  pointer-events: none;
+}
+.download-file {
+  position: absolute;
+  left: 45px;
+  top: 5px;
+}
+.remove-file {
+  content: url(/src/icons/close-icon.svg);
+  display: inline-block;
+  margin-left: 5px;
+  height: 18px;
+  width: 18px;
+  padding: 3px;
+  position: absolute;
+  border-radius: 50%;
+}
+.remove-file:hover {
+  background-color: var(--gainsBoro);
+}
+
+.certificate-redirect {
+  text-align: center;
+  padding: 40px 0px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  font-size: 16px;
+}
+
+.modal .goal-end-date {
+  width: 100%;
+  height: 31px;
+  box-sizing: border-box;
+  text-indent: 4px;
+  border: 1px solid var(--borderFormElements);
+  border-radius: 5px;
+  box-shadow: 0px 4px 20px var(--boxShadowFormElements);
+  outline: none;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 15px;
+  border-top: 1px solid var(--backgroundColor2);
+}
+
+.modal-footer .button {
+  margin-right: 20px;
+  color: var(--white);
+  background: var(--primaryButtonBackground);
+  border: 0 none;
+}
+
+.modal-footer .button:hover {
+  background: var(--backgroundPrimaryHover);
+}
+.modal-footer .button:active {
+  background: var(--backgroundPrimaryActive);
+}
+
+.modal-footer .button.cancel {
+  background: white;
+  color: var(--lightBlack);
+  border: 1px solid var(--grey);
+}
+
+.modal-footer .button.cancel:hover {
+  background: #e6e6e6;
+}
+
+.modal-footer .button.cancel:active {
+  background: #e6e6e6;
+  box-shadow: inset 0 3px 5px rgb(0 0 0 / 13%);
+}
+
+.modal-content {
+  padding: 10px 15px 5px 15px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 12px;
+  max-height: 81vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-size: 14px;
+  scrollbar-color: var(--gainsBoro) white; /* thumb and track color */
+  scrollbar-width: thin;
+}
+
+.modal-item.title,
+.modal-item.description,
+.modal-item.feedback {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.modal-item label {
+  display: inline-block;
+  margin-left: 1px;
+  margin-bottom: 3px;
+}
+
+.modal-item .star-rating {
+  margin-bottom: 7px;
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.modal-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.modal-content::-webkit-scrollbar-thumb {
+  background: var(--gainsBoro);
+}
+
+/* Handle on hover */
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: var(--iconColor);
+}
+
+/* ----------- Dialog animation -----------*/
+/* .ReactModal__Overlay {
+  transform: translate(0, -25%);
+  opacity: 0;
+  transition: transform 0.3s ease-out, opacity 0.15s linear;
+}
+
+.ReactModal__Overlay--after-open {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  transform: translate(0, -25%);
+  opacity: 0;
+} */
+
+.ReactModal__Content {
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.ReactModal__Overlay--after-open .ReactModal__Content,
+.ReactModal__Overlay--before-close .ReactModal__Content {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  animation-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.ReactModal__Overlay--after-open .ReactModal__Content {
+  -webkit-animation-name: anim-open;
+  animation-name: anim-open;
+}
+
+.ReactModal__Overlay--before-close .ReactModal__Content {
+  -webkit-animation-name: anim-close;
+  animation-name: anim-close;
+}
+
+/* Dialog animations */
+@-webkit-keyframes anim-open {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-400px, 0, 0) scale3d(1.4, 0.5, 1);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  }
+}
+
+@keyframes anim-open {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-400px, 0, 0) scale3d(1.4, 0, 1);
+    transform: translate3d(-400px, 0, 0) scale3d(1.4, 0, 1);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  }
+}
+
+@-webkit-keyframes anim-close {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  }
+  20% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(-400px, 0, 0) scale3d(1.4, 0.5, 1);
+  }
+}
+
+@keyframes anim-close {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  }
+  20% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(-400px, 0, 0) scale3d(1.4, 0, 1);
+    transform: translate3d(-400px, 0, 0) scale3d(1.4, 0, 1);
+  }
+}
+/* ---------------------------------------- */
+
+/* ------------- Error style -------------*/
+.error-message {
+  margin-top: 2px;
+  font-size: 13px;
+  color: red;
+}
+
+.textarea + .error-message {
+  margin-top: 0px;
+}
+
+.error input,
+.error .dropdown,
+.error .textarea,
+.error .input-chips {
+  border-color: red;
+}
+
+@media screen and (max-width: 480px) {
+  .modal-content {
+    grid-template-columns: 1fr;
+    column-gap: 0px;
+    row-gap: 15px;
+  }
+  .modal-item.title,
+  .modal-item.description,
+  .modal-item.feedback {
+    grid-column-start: 1;
+    grid-column-end: 1;
+  }
+}

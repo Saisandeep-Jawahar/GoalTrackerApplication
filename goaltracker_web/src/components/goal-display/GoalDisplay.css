@@ -1,0 +1,30 @@
+.goal-display {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  min-height: 330px;
+  padding: 10px;
+}
+
+.goal-display.empty {
+  justify-content: center;
+  align-items: center;
+}
+
+.empty-records {
+  transform-origin: right bottom;
+  animation-name: moveCard;
+  animation-timing-function: ease-out;
+  animation-duration: 500ms;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.empty-result-icon {
+  display: block;
+  height: 60px;
+  width: 60px;
+  margin: auto;
+  margin-bottom: 10px;
+}

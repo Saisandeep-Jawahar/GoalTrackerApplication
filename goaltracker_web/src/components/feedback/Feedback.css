@@ -1,0 +1,29 @@
+.feedback .title {
+  margin-top: 10px;
+  font-size: 16px;
+  color: var(--textColor2);
+}
+
+.feedback-item {
+  padding-left: 5px;
+  padding-bottom: 3px;
+  padding-top: 5px;
+}
+
+.feedback-item .row {
+  margin-bottom: 3px;
+}
+
+.feedback-item .name,
+.feedback-item .rating {
+  color: var(--textColor2);
+  display: inline-block;
+}
+
+.feedback-item .name {
+  margin-right: 10px;
+}
+
+.feedback-item .content {
+  text-align: justify;
+}

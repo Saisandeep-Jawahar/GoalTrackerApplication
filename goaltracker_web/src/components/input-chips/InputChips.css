@@ -1,0 +1,91 @@
+.input-chips {
+  position: relative;
+  padding: 3px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 31px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background: var(--white);
+  border: 1px solid var(--borderFormElements);
+  box-shadow: 0px 4px 20px var(--boxShadowFormElements);
+}
+
+.input-chips input {
+  width: 100%;
+  margin-top: 3px;
+  border: 0 none;
+  outline: none;
+}
+
+.input-chips .chip-item {
+  font-size: 13px;
+  line-height: 13px;
+  padding: 1px 4px 4px 4px;
+  margin: 2px;
+  background-color: #e5e5e5;
+  border-radius: 6px;
+}
+
+.input-chips .chip-item-close {
+  display: inline-block;
+  height: 13px;
+  width: 13px;
+  margin-left: 2px;
+  content: url(/src/icons/times-circle-solid.svg);
+  position: relative;
+  top: 2px;
+}
+
+.input-chips .options {
+  position: absolute;
+  max-height: 170px;
+  overflow: auto;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  top: 100%;
+  margin-top: 4px;
+  background-color: white;
+  border: 1px solid var(--gainsBoro);
+  transform-origin: top center;
+  transition: transform 400ms ease-in-out;
+  animation: rotateMenu 400ms ease-in-out forwards;
+}
+
+.input-chips .options.hide {
+  display: none;
+}
+.input-chips .options.show {
+  display: block;
+}
+
+.input-chips .option {
+  padding: 7px 10px;
+}
+
+.input-chips .option:hover,
+.input-chips .option.hover {
+  background-color: var(--popupItemHover);
+}
+
+.input-chips .options::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.input-chips .options::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.input-chips .options::-webkit-scrollbar-thumb {
+  background: var(--gainsBoro);
+}
+
+/* Handle on hover */
+.input-chips .options::-webkit-scrollbar-thumb:hover {
+  background: var(--iconColor);
+}

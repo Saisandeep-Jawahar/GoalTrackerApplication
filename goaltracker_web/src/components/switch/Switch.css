@@ -1,0 +1,34 @@
+.switch {
+    float: right;
+  }
+
+.switch-container {
+  display: flex;
+  border: 1px solid var(--gainsBoro);
+  background-color: var(--white);
+  border-radius: 5px;
+  }
+
+.switch-item {
+  font-size: 14px;
+  padding: 5px 10px;
+  border-collapse: collapse;
+  }
+
+.switch-item:hover {
+  background-color: var(--backgroundColor1);
+  }
+
+.switch-item.active {
+  background-color: var(--gainsBoro);
+}
+@media screen and (max-width: 480px) {
+  .switch {
+    float: none;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  .switch-item {
+    flex-grow: 1;
+  }
+}

@@ -1,0 +1,18 @@
+.filter-list {
+  margin-top: 20px;
+}
+.display-filter {
+  color: var(--grey);
+  display: inline-block;
+  border: 1px solid var(--gainsBoro);
+  padding: 2px 20px 4px 20px;
+  border-radius: 20px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.filter-remove {
+  margin-left: 10px;
+  cursor: pointer;
+  position: relative;
+  top: 1px;
+}

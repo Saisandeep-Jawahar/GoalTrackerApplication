@@ -1,0 +1,12 @@
+.redirect-to-login .modal-content {
+    display: block;
+}
+
+.redirect-to-login .modal-footer {
+    border-top: 0 none;
+    justify-content: center;
+}
+
+.redirect-to-login .modal-footer .button {
+    margin-right: 0;
+}
